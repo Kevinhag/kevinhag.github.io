@@ -1,0 +1,53 @@
+body {font-family: 'Roboto';font-size: 22px;
+}
+
+#sideMenu a {
+    position: absolute;
+    left: -160px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 180px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family:"Roboto Condensed";
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  #sideMenu a:hover {
+    left: 0;
+  }
+  
+  #home {
+    top: 20px;
+    background-color: #414141;
+  }
+  
+  #expcreative {
+    top: 80px;
+    background-color: #7e1535;
+  }
+  
+  #cybersys {
+    top: 140px;
+    background-color: #20aa27;
+  }
+  
+  #filosophy {
+    top: 200px;
+    background-color: #cf0292
+  }
+  #ralgo {
+    top: 260px;
+    background-color: #9334a7
+  }
+  #lmat {
+    top: 320px;
+    background-color: #2357a1
+  }
+
+  #pageTest {
+    background-color: rgb(156, 156, 172);
+    margin-left:220px;
+    margin-right: 220px;
+  }
