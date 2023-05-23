@@ -1,12 +1,12 @@
-body {font-family: 'Roboto';font-size: 22px;
+body {font-family: "Roboto";font-size: 22px;
 }
 
 #sideMenu a {
     position: absolute;
-    left: -160px;
+    left: -150px;
     transition: 0.3s;
     padding: 15px;
-    width: 180px;
+    width: 170px;
     text-decoration: none;
     font-size: 20px;
     font-family:"Roboto Condensed";
@@ -15,7 +15,7 @@ body {font-family: 'Roboto';font-size: 22px;
   }
   
   #sideMenu a:hover {
-    left: 0;
+    left: -10px;
   }
   
   #home {
