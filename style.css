@@ -1,53 +1,134 @@
-body {font-family: "Roboto";font-size: 22px;
+html {
+  scroll-behavior: smooth;
 }
 
-#sideMenu a {
-    position: absolute;
-    left: -150px;
-    transition: 0.3s;
-    padding: 15px;
-    width: 170px;
-    text-decoration: none;
-    font-size: 20px;
-    font-family:"Roboto Condensed";
-    color: white;
-    border-radius: 0 5px 5px 0;
-  }
-  
-  #sideMenu a:hover {
-    left: -10px;
-  }
-  
-  #home {
-    top: 20px;
-    background-color: #414141;
-  }
-  
-  #expcreative {
-    top: 80px;
-    background-color: #7e1535;
-  }
-  
-  #cybersys {
-    top: 140px;
-    background-color: #20aa27;
-  }
-  
-  #filosophy {
-    top: 200px;
-    background-color: #cf0292
-  }
-  #ralgo {
-    top: 260px;
-    background-color: #9334a7
-  }
-  #lmat {
-    top: 320px;
-    background-color: #2357a1
-  }
+body {
+  background-color: whitesmoke;
+  font-family: "Roboto";
+  font-size: 22px;
+}
 
-  #pageTest {
-    background-color: rgb(156, 156, 172);
-    margin-left:220px;
-    margin-right: 220px;
-  }
+header {
+  background-image: url(/images/hexa_bg.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
+  color: white;
+  display: flex;
+  height: 250px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content:center;
+}
+
+h1 {
+  font-size: 72px;
+  font-family: "Lato";
+  font-weight: 900;
+}
+
+h2 {
+  justify-content: center;
+  font-size: 36px;
+  font-family: "Roboto";
+  font-weight: 100;
+}
+
+h3 {
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-size: 56px;
+  font-family: "Roboto Condensed";
+  font-weight: 500;
+}
+
+h4 {
+  text-align: center;
+  font-size: 42px;
+  font-family: "Roboto";
+  font-weight: 100;
+}
+
+p {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: white;
+  border: solid 1px #CFCFCF;
+  padding: 15px;
+  margin-bottom: 10px auto;
+  font-size: 18px;
+  font-family: "Roboto";
+}
+
+section {
+  padding: 20px;
+  margin: 50px auto;
+  max-width: 1100px;
+}
+
+div {
+  display:block;
+  margin-right: 30px;
+  /* background-color: grey; */
+}
+img {
+  display: block;
+  margin: auto;
+}
+
+#home {
+  background: #414141;
+}
+
+#expcreative {
+  background: #7e1535;
+}
+
+#cybersys {
+  background: #20aa27;
+}
+
+#filosophy {
+  background: #cf0292
+}
+
+#ralgo {
+  background: #9334a7
+}
+
+#lmat {
+  background: #2357a1
+}
+
+#sideMenu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  left: 0px;
+  height: fit-content;
+  top: 50%;
+  translate: 0 -50% 0;
+}
+
+.sideMenuButton {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.2);
+  translate: -70% 0 0;
+  transition: 0.3s;
+  padding: 15px;
+  width: 200px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Lato";
+  font-weight: 400;
+  color: white;
+  border-radius: 0 10px 10px 0;
+}
+
+.sideMenuButton:hover {
+  color: white;
+  text-decoration: none;
+  translate: -1px;
+  background: black;
+}
+
