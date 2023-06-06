@@ -241,8 +241,8 @@ void draw(){
           </p>
           <img src="/assets/typ_3.gif" play loop height="180px">
         </div>
-        <div class="flex-row">
-          <div class="flex-column">
+        <div style="display: grid; grid-template-columns: auto auto auto; gap: 20px;">
+          <div>
             <h2>Programação</h2>
             <p>
               A programação no Processing é totalmente visual, fazendo a gente focar na lógica dos eventos. <br>
@@ -250,17 +250,17 @@ void draw(){
               muitos elementos de interação nas fases, como sprites animados e objetos se movendo.
             </p>
           </div>
-          <div class="flex-column">
+          <div>
             <h2>Design</h2>
             <p>
               Fiz grande parte do design, incluindo montar sprites, animações, hitboxes, e aplicar todos esses elementos
-              nos quadros das fases. <br>
-              Cada fase tem algo particular, fora a aparencia geral. <br> Fiz elementos de segundo plano animados para mais
-              fluidez e até sprites de cor para transição entre telas. Também ajudei um pouco nos menus, mantendo o mesmo estilo de imagens e animação da pagina de créditos.
+              nos quadros das fases.
+              Cada fase tem algo particular, fora a aparencia geral.Fiz elementos de segundo plano animados para mais
+              fluidez e até sprites de cor para transição entre telas.
 
             </p>
           </div>
-          <div class="flex-column">
+          <div>
             <h2>Level Design</h2>
             <p>
               Dividimos em três, os designs. Planejei a segunda fase, na cidade, onde é o caminho de transição para a
@@ -519,20 +519,21 @@ void draw(){
             comparados usando a lógica do código abaixo.
           </p>
         </div>
-        <pre><code class="language-python" style="display:block;height: 500px;width:1000px;font-size:medium;" >
+        <pre><code class="language-python" style="display:block;height: 500px;width:1000px;font-size:medium;word-wrap:break-word;" >
 from random import randint  # importa o modulo randint que gera um numero INT randomicamente
 from time import sleep  # importa o modulo sleep, que consegue controlar uma pausa entre um comando e outro
-
-jokenpo = ["Stone", "Paper", "Scissors"]  # Lista usada para atrubuir os numeros de 0 a 2 como Pedra, Papel e Tesoura
+# Lista usada para atrubuir os numeros de 0 a 2 como Pedra, Papel e Tesoura
+jokenpo = ["Stone", "Paper", "Scissors"]
 gameMode = None
 cntnue = 1
 p1 = None   # Variavel do Player 1
 p2 = None   # Variavel do Player 2
 p1win = 0   # Variavel de score do Player 1
 p2win = 0   # Variavel de score do Player 2
-
-while gameMode != 0 and gameMode != 1 and gameMode != 2: # Loop de entrada incorreta, se um número que não seja 0,1,2 for inserido, vai repetir
-    gameMode = int(input("\n--- PC vs PC (0)\n--- Player vs PC (1)\n--- Player vs Player (2)\n"))    # Variavel de selecao de modo
+# Loop de entrada incorreta, se um número que não seja 0,1,2 for inserido, vai repetir
+while gameMode != 0 and gameMode != 1 and gameMode != 2: 
+    # Variavel de selecao de modo
+    gameMode = int(input("\n--- PC vs PC (0)\n--- Player vs PC (1)\n--- Player vs Player (2)\n"))
 
 while cntnue == 1:  # Loop de continue, enquanto estiver 1 vai repetir
     if gameMode == 0:   # Entra no modo de jogo de PC vs PC
@@ -643,7 +644,8 @@ while qddLetraVisivel != 0 and life != 0:
     else:   # Se a entrada ESTÁ presente na palavra atual...
         for i in range(len(palavra)): # Loop para verificar se existe uma ou mais da mesma entrada...
             if letraInput == palavra[i]:
-                visibilidade[i] = 0 # Se a entrada existe, muda o estado do visibilidade para 0, mostrando a letra no palavraVisivel
+            # Se a entrada existe, muda o estado do visibilidade para 0, mostrando a letra no palavraVisivel
+                visibilidade[i] = 0 
                 palavraVisivel[i] = palavra[i]
                 if letraInput not in letraUsada: # Se a entrada não existe nas letras usadas, ela é adicionada
                     letraUsada.append(palavra[i])
