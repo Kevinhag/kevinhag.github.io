@@ -1,32 +1,24 @@
-// window.addEventListener('scroll', function() {
-//     var parallaxElements = document.getElementsByClassName('parallax');
-//     for (var i = 0; i < parallaxElements.length; i++) {
-//         var speed = i % 2 === 0 ? 0.5 : 0.3; // Defina as velocidades para cada elemento parallax
 
-//         var yPos = -(window.pageYOffset * speed);
-//         parallaxElements[i].style.backgroundPosition = 'center ' + yPos + 'px';
-//     }
-// });
+let mainNavLinks = document.querySelectorAll("#sideMenu .sideMenuButton");
+let mainSections = document.querySelectorAll("main > section");
 
-let mainNavLinks = document.querySelectorAll("sideMenuButton");
-let mainSections = document.querySelectorAll("body main section");
+window.addEventListener("scroll", () => {
+  let fromTop = window.scrollY;
 
-let lastId;
-let cur = [];
-
-window.addEventListener("scroll", event => {
-    let fromTop = window.scrollY;
-
-    mainNavLinks.forEach(link => {
-        let section = document.querySelector(link.hash);
-
-        if (
-            section.offsetTop <= fromTop &&
-            section.offsetTop + section.offsetHeight > fromTop
-        ) {
-            link.classList.add("current");
-        } else {
-            link.classList.remove("current");
+  mainSections.forEach(section => {
+    if (
+      section.offsetTop <= fromTop + 50 &&
+      section.offsetTop + section.offsetHeight > fromTop + 50
+    ) {
+      let hash = "#" + section.id;
+      mainNavLinks.forEach(link => {
+        link.classList.remove("current");
+        if (link.getAttribute("href") === hash) {
+          link.classList.add("current");
         }
-    });
+      });
+    }
+  });
 });
+
+window.dispatchEvent(new Event("scroll"))

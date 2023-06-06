@@ -195,7 +195,7 @@ img {
   text-align: center
 }
 
-.tab {
-    display: inline-block;
-    margin-left: 40px;
+.sideMenuButton.current {
+  background: black;
+  translate: -1px;
 }
